@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdenarComponent implements OnInit {
 
+  ordenarPOr: string = '';
+
   heroes: Heroe[] = [
     {
       nombre: 'Superman',
@@ -42,6 +44,10 @@ export class OrdenarComponent implements OnInit {
 
   cambiar() {
     this.aplicarPipe = !this.aplicarPipe;
+  }
+
+  cambiarOrden(value: string) {
+    this.ordenarPOr = value;
   }
 
 }

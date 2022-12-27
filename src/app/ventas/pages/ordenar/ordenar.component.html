@@ -16,10 +16,12 @@
 
         <button pButton label="En mayusculas" (click)="cambiar()" class="mr-1 p-button-success"></button>
 
-        <button pButton icon="pi pi-sort" label="Por nombre" class="mr-1"></button>
+        <button pButton icon="pi pi-sort" label="Por nombre" class="mr-1" (click)="cambiarOrden('nombre')"></button>
 
-        <button pButton icon="pi pi-sort" label="Vuela" class="mr-1 p-button-success"></button>
-        <button pButton icon="pi pi-sort" label="Por Color" class="mr-1 p-button-warning"></button>
+        <button pButton icon="pi pi-sort" label="Vuela" class="mr-1 p-button-success"
+            (click)="cambiarOrden('vuela')"></button>
+        <button pButton icon="pi pi-sort" label="Por Color" class="mr-1 p-button-warning"
+            (click)="cambiarOrden('color')"></button>
     </div>
 </p-toolbar>
 
@@ -27,7 +29,7 @@
     <div class="col mt-5">
 
 
-        <p-table [value]="heroes | ordenar" [tableStyle]="{'min-width': '50rem'}">
+        <p-table [value]="heroes | ordenar:ordenarPOr" [tableStyle]="{'min-width': '50rem'}">
             <ng-template pTemplate="header">
                 <tr>
                     <th>Nombre</th>
