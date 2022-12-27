@@ -1,3 +1,4 @@
+import { PrimeNgModule } from './../prime-ng/prime-ng.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
@@ -9,7 +10,8 @@ import { MenuComponent } from './menu/menu.component';
     MenuComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimeNgModule
   ],
   exports: [MenuComponent]
 })
